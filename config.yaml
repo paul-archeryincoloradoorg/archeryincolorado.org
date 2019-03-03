@@ -3,6 +3,11 @@ languageCode: en-us
 title: Archery in Colorado
 theme: hugo-fresh
 
+taxonomies:
+  - tag: ""
+  - group: ""
+  - category: ""
+
 params:
   font:
     name: "Open Sans"
@@ -17,7 +22,7 @@ params:
     # Where the main hero button links to
     buttonlink: "#"
     # Hero image (from /images/___)
-    image: illustrations/worker.svg
+    image: photos/archery-range.jpg
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Mission
