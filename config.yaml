@@ -20,19 +20,21 @@ params:
     # Button text
     buttontext: Donate
     # Where the main hero button links to
-    buttonlink: "#"
+    buttonlink: "/donate"
     # Hero image (from /images/___)
     image: photos/archery-range.jpg
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Mission
-    url: /
+    url: /mission
   - title: Board of Directors
-    url: /
+    url: /board
   - title: News
-    url: /
+    url: /news
+  - title: Contact
+    url: mailto:board@archeryincolorado.org
   - title: Donate
-    url: /
+    url: /donate
     button: true
 #  sidebar:
 #    # Logo (from /images/logos/___.svg)
