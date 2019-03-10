@@ -25,6 +25,8 @@ params:
     image: photos/archery-range.jpg
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
+  - title: Home
+    url: /
   - title: Mission
     url: /mission
   - title: Board of Directors
