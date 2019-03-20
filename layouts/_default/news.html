@@ -28,17 +28,19 @@
     </section>
 
     {{ range .Pages }}
-    {{/* $headshotR := .Resources.GetMatch "images/placeholder.jpg" */}}
-    {{/* $headshot := $headshotR.Fill "150x150" */}}
     <section class="section container">
       <div class="tile is-ancestor">
         <div class="tile is-parent box">
           <div class="tile is-child is-2">
-            <img src="images/placeholder.jpg" width="150" height="150" />
+          	<div class="calendar">
+          		<div class="month">
+          		</div>
+          		<div class="day">
+          		</div>
+          	</div>
           </div>
           <div class="tile is-child is-10">
-            <h2>{{ .Params.Name }}</h2>
-            <h4>{{ .Params.Title }}</h4>
+            <h2>{{ .Params.Title }}</h2>
             {{ .Content }}
           </div>
         </div>
