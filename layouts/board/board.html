@@ -27,14 +27,19 @@
       </div>
     </section>
 
+    <pre>
+    {{ . }}
+    {{ $placeholderR := .Resources.GetMatch "placeholder.jpg" }}
+    {{ $placeholderR }}
+    {{/* $placeholder := $placeholderR.Fill "150x150" */}}
+    </pre>
+    
     {{ range .Pages }}
-    {{/* $headshotR := .Resources.GetMatch "images/placeholder.jpg" */}}
-    {{/* $headshot := $headshotR.Fill "150x150" */}}
     <section class="section container">
       <div class="tile is-ancestor">
         <div class="tile is-parent box">
           <div class="tile is-child is-2">
-            <img src="images/placeholder.jpg" width="150" height="150" />
+            <img src="placeholder.jpg" width="150" height="150" />
           </div>
           <div class="tile is-child is-10">
             <h2>{{ .Params.Name }}</h2>
