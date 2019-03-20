@@ -29,11 +29,13 @@
 
     <pre>
     {{ . }}
-    {{ $placeholderR := .Resources.GetMatch "placeholder.jpg" }}
+    {{ $boardpage := .GetPage "/board/_index.md" }}
+    {{ $boardpage }}
+    {{ $placeholderR := $boardpage.Resources.GetMatch "placeholder.jpg" }}
     {{ $placeholderR }}
-    {{/* $placeholder := $placeholderR.Fill "150x150" */}}
+    {{ $placeholder := $placeholderR.Fill "150x150" }}
     </pre>
-    
+
     {{ range .Pages }}
     <section class="section container">
       <div class="tile is-ancestor">
