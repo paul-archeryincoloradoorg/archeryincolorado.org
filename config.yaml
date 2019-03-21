@@ -8,6 +8,9 @@ taxonomies:
   - group: ""
   - category: ""
 
+frontmatter:
+lastmod: ["lastmod", ":git", "date", "publishDate"]
+
 params:
   font:
     name: "Open Sans"

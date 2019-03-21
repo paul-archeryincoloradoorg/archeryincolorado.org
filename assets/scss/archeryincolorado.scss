@@ -23,6 +23,42 @@
     }
 }
 
+$red: #c5221f;
+$highlight: #F39200;
+
+.calendar {
+    position:relative;
+    border: 2px $red solid;
+    border-radius: 1em;
+    height: 6em;
+    width: 6em;
+    font-weight: bolder;
+    text-align:center;
+    margin:auto;
+    .month {
+        background: $red;
+        border: 2px $red solid;
+        border-top-left-radius: .5em;
+        border-top-right-radius: .5em;
+        color: white;
+        font-weight: bolder;
+        text-align:center;
+        font-size: larger;
+        height: 40%;
+    }
+    .day {
+        padding-top:0;
+        margin-top:-.2em;
+        font-size: 300%
+    }
+}
+
+.byline {
+    font-size: smaller;
+    text-align:center;
+    color: $highlight;
+}
+
 section.section.is-medium {
     h1 {
         font-size: x-large;

@@ -34,14 +34,17 @@
           <div class="tile is-child is-2">
           	<div class="calendar">
           		<div class="month">
+                {{ .Lastmod.Format "Jan" }}
           		</div>
           		<div class="day">
+                {{ .Lastmod.Format "02" }}
           		</div>
           	</div>
+            <div class="byline">by {{ .Params.author }}</div>
           </div>
           <div class="tile is-child is-10">
             <h2>{{ .Params.Title }}</h2>
-            {{ .Content }}
+            {{ .Summary }}
           </div>
         </div>
       </div>
