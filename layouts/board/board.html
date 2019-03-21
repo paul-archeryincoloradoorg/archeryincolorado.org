@@ -30,7 +30,7 @@
     {{- $placeholderR := .Resources.GetMatch "placeholder.jpg" }}
     {{- $placeholder := $placeholderR.Fill "150x150 q90" }}
 
-    {{- range .Resources.ByType "page" }}
+    {{- range .Pages }}
     {{- $headshot := $placeholder }}
     {{- if (isset .Params "headshot") }}
     {{- $headshot = .Resources.GetMatch (.Params.headshot) }}
