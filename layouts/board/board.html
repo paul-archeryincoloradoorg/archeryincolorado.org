@@ -27,21 +27,19 @@
       </div>
     </section>
 
-    <pre>
-    {{ . }}
-    {{ $boardpage := .GetPage "/board/_index.md" }}
-    {{ $boardpage }}
-    {{ $placeholderR := $boardpage.Resources.GetMatch "placeholder.jpg" }}
-    {{ $placeholderR }}
-    {{ $placeholder := $placeholderR.Fill "150x150" }}
-    </pre>
+    {{- $placeholderR := .Resources.GetMatch "placeholder.jpg" }}
+    {{- $placeholder := $placeholderR.Fill "150x150 q90" }}
 
-    {{ range .Pages }}
+    {{- range .Resources.ByType "page" }}
+    {{- $headshot := $placeholder }}
+    {{- if (isset .Params "headshot") }}
+    {{- $headshot = .Resources.GetMatch (.Params.headshot) }}
+    {{- end }}
     <section class="section container">
       <div class="tile is-ancestor">
         <div class="tile is-parent box">
           <div class="tile is-child is-2">
-            <img src="placeholder.jpg" width="150" height="150" />
+            <img src="{{$headshot.RelPermalink}}" width="{{$headshot.Width}}" height="{{$headshot.Height}}" />
           </div>
           <div class="tile is-child is-10">
             <h2>{{ .Params.Name }}</h2>
@@ -51,7 +49,7 @@
         </div>
       </div>
     </section>
-    {{ end }}
+    {{- end }}
 
     {{ partial "footer.html" . }}
     {{ partial "javascript.html" . }}
