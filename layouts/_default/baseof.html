@@ -13,20 +13,24 @@
     <!-- End Google Tag Manager -->
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWPJW9V"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Preloader -->
     <div id="preloader">
       <div id="status"></div>
     </div>
-    {{ partial "navbar.html" . }}
-    {{ partial "navbar-clone.html" . }}
 
-    {{ partial "single/content.html" . }}
+    {{ block "main" . }}
+
+    {{ if .Site.Params.hero }}
+    {{ partial "hero.html" . }}
+    {{ end }}
 
     {{ partial "footer.html" . }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ end }}
+
     {{ partial "javascript.html" . }}
   </body>
 </html>
