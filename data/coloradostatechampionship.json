@@ -11,24 +11,6 @@
 				"gender": "Male"	
 			},
 			"brackets": {
-				"quarter": [
-					[
-						{ "name": "Colton Williams", "advance": true },
-						{ "name": "BYE" }
-					],
-					[
-						{ "name": "BYE" },
-						{ "name": "BYE" }
-					],
-					[
-						{ "name": "Charlie Shumway", "advance": true },
-						{ "name": "BYE" }
-					],
-					[
-						{ "name": "BYE" },
-						{ "name": "Ethan Williams", "advance": true }
-					]
-				],
 				"semi": [
           [
             { "name": "Colton Williams", "advance": true },
@@ -60,24 +42,6 @@
         "gender": "Female"
       },
       "brackets": {
-        "quarter": [
-          [
-            { "name": "Ali Bliss", "advance": true },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "Zoe Robinson", "advance": true},
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "Makayla McFarren", "advance": true}
-          ]
-        ],
         "semi": [
           [
             { "name": "Ali Bliss", "advance": true },
@@ -109,38 +73,148 @@
         "gender": "Male"
       },
       "brackets": {
-        "quarter": [
-          [
-            { "name": "Tyler Williams", "advance": true },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "Tristan Williams", "advance": true }
-          ]
-        ],
-        "semi": [
-          [
-            { "name": "Tyler Williams", "advance": true },
-            { "name": "BYE" }
-          ],
-          [
-            { "name": "BYE" },
-            { "name": "Tristan Williams", "advance": true }
-          ]
-        ],
         "gold": [
           [
             { "name": "Tyler Williams", "scores": [27,30,26,28,27], "win": "second" },
             { "name": "Tristan Williams", "scores": [29,27,30,29,28], "win": "first" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Bowman",
+        "gender": "Male"
+      },
+      "brackets": {
+        "gold": [
+          [
+            { "name": "Burke Feth", "scores": [9,24,10,7,18], "win": "second"},
+            { "name": "Fisher Haugse", "scores": [11,16,1,12,22], "win": "first"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Guest",
+        "gender": "Female"
+      },
+      "brackets": {
+        "gold": [
+          [
+            { "name": "Trinity Weiss", "scores": [28,24,28], "win": "first"},
+            { "name": "Deeksha Elango", "scores": [24,22,23], "win": "second"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Cadet",
+        "gender": "Female"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Elsa Vanderbilt", "scores": [15,12,6,19], "advance": true},
+            { "name": "Kaitlin Krueger", "scores": [9,7,7,9]}
+          ],
+          [
+            { "name": "Sophia Foraker", "scores": [4,0,0,2]},
+            { "name": "Araceli Gonzalez", "scores": [15,0,0,8], "advance": true}
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Sophia Foraker", "scores": [4,7,12,0,3], "win": "third"},
+            { "name": "Kaitlin Krueger", "scores": [2,16,0,2,0]}
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Elsa Vanderbilt", "scores": [9,14,20,16], "win": "first"},
+            { "name": "Araceli Gonzalez", "scores": [14,12,17,7], "win": "second"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Cub",
+        "gender": "Male"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Corbin Lewis", "advance": true},
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Noah Rice", "scores": [7,19,12]},
+            { "name": "Grant Tade", "scores": [26,20,21], "advance": true}
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Corbin Lewis", "scores": [25,24,19,24,18], "win": "first" },
+            { "name": "Grant Tade", "scores": [21,25,25,22,16], "win": "second" }
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Noah Rice", "win": "third" },
+            { "name": "BYE"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Cub",
+        "gender": "Male"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Cooper McQueen", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Ty Falls", "scores": [13,0,7,10,16] },
+            { "name": "Riley Neumayer", "scores": [18,27,27,9,23], "advance": true }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Cooper McQueen", "scores": [28,26,23,23,23], "win": "second" },
+            { "name": "Riley Neumayer", "scores": [15,26,25,25,27], "win": "first" }
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Ty Falls", "win": "third" },
+            { "name": "BYE" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Cadet",
+        "gender": "Male"
+      },
+      "brackets": {
+        "gold": [
+          [
+            { "name": "Evan Thibodeau", "scores": [16,14,8,10,7], "win": "second"},
+            { "name": "Grant DeBernardi", "scores": [16,13,15,14,14], "win": "first"}
           ]
         ]
       }

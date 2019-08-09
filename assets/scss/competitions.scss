@@ -1,0 +1,33 @@
+$firstset: #fff;
+$secondset: #ddf;
+$separator: #ddf;
+$maincolor: #4a4a4a;
+
+table {
+  width: 100%;
+  border: 1px black solid;
+}
+
+th, td {
+  border: 1px black solid;  
+  padding-left: 3px;
+  padding-rigth: 3px;
+}
+
+tr.sep {
+  background: $separator;
+}
+
+tr {
+  &:nth-child(4n), &:nth-child(4n+1) {
+    background: $secondset;
+    &.bye {
+      color: lighten($maincolor, 10%);
+      background: darken($secondset, 1.5%);
+    }
+  }
+  &.bye {
+    color: lighten($maincolor, 10%);
+    background: darken($firstset, 10%);
+  }
+}

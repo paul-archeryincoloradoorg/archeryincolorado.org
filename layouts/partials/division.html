@@ -10,18 +10,18 @@
 			<th>Result</th>
 		</tr>
 	</thead>
-	<tbody>
+	{{ if .brackets.quarter }}<tbody>
 		<tr class="sep">
 			<th colspan="10">Quarterfinal</th>
 		</tr>
 		{{ partial "matchplay-result.html" (dict "bracket" .brackets.quarter "winner" "👑" "looser" "") }}
-	</tbody>
-	<tbody>
+	</tbody>{{ end }}
+	{{ if .brackets.semi }}<tbody>
 		<tr class="sep">
 			<th colspan="10">Semifinal</th>
 		</tr>
 		{{ partial "matchplay-result.html" (dict "bracket" .brackets.semi "winner" "👑" "looser" "") }}
-	</tbody>
+	</tbody>{{ end }}
   {{ if .brackets.bronze }}<tbody>
     <tr class="sep">
       <th colspan="10">Bronze</th>

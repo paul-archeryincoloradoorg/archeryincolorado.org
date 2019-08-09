@@ -4,6 +4,9 @@
     {{ partial "meta.html" . }}
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "css.html" . }}
+    {{- $competitionScss := "scss/competitions.scss" }}
+    {{- $competitionCss  := resources.Get $competitionScss | toCSS | minify | fingerprint }}
+<link rel="stylesheet" type="text/css" href="{{ $competitionCss.RelPermalink }}" integrity="{{ $competitionCss.Data.Integrity }}">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,37 +14,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NWPJW9V');</script>
     <!-- End Google Tag Manager -->
-
-<style>
-  table {
-    width: 100%;
-    border: 1px black solid;
-  }
-
-  th, td {
-    border: 1px black solid;  
-    padding-left: 3px;
-    padding-rigth: 3px;
-  }
-
-  tr.sep {
-    background: #ddf;
-  }
-
-  tr.bye {
-    color: #999;
-    background: #ddd;
-  }
-
-  tr:nth-child(4n), tr:nth-child(4n+1) {
-    background: #ddf;
-  }
-
-/*  td.pairing:nth-child(4n+2) {
-    background: #77f;
-  }
-  */
-</style>
 
   </head>
   <body>

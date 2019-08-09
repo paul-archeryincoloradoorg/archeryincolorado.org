@@ -17,10 +17,10 @@
 			{{ end }}
 			<td></td>
 			<td>
-			{{ if (eq .win "third")}}🥉
-			{{ else if (eq .win "second")}}🥈
-			{{ else if (eq .win "first")}}🥇
-			{{ else if .advance }}{{ $winner }}
+			{{ if (eq .win "third")}}<div class="tooltip">🥉<span class="tooltiptext">Third Place</span></div>
+			{{ else if (eq .win "second")}}<div class="tooltip">🥈<span class="tooltiptext">Second Place</span></div>
+			{{ else if (eq .win "first")}}<div class="tooltip">🥇<span class="tooltiptext">First Place</span></div>
+			{{ else if .advance }}<div class="tooltip">{{ $winner }}<span class="tooltiptext">Advance</span></div>
 			{{ else }}{{ $loser }}{{ end }}</td>
 		</tr>
 		{{ end }}
