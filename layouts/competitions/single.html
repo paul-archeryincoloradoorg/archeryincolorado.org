@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NWPJW9V');</script>
+    <!-- End Google Tag Manager -->
+
+<style>
+  table {
+    width: 100%;
+    border: 1px black solid;
+  }
+
+  th, td {
+    border: 1px black solid;  
+    padding-left: 3px;
+    padding-rigth: 3px;
+  }
+
+  tr.sep {
+    background: #ddf;
+  }
+
+  tr.bye {
+    color: #999;
+    background: #ddd;
+  }
+
+  tr:nth-child(4n), tr:nth-child(4n+1) {
+    background: #ddf;
+  }
+
+/*  td.pairing:nth-child(4n+2) {
+    background: #77f;
+  }
+  */
+</style>
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWPJW9V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-centered">
+            <h1 class="title section-title">{{ .Title }}</h1>
+            <h5 class="subtitle is-muted">{{ .Params.Subtitle }}</h5>
+            <div class="divider"></div>
+          </div>
+        </div>
+        {{ .Content }}
+      </div>
+    </section>
+
+  {{ with .Site.Data.coloradostatechampionship }}
+    {{ range .matchplay }}
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-centered">
+            {{ partial "division.html" . }}
+            </div>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+    
+
+
+    {{ partial "footer.html" . }}
+    {{ partial "javascript.html" . }}
+  </body>
+</html>

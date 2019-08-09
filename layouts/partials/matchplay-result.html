@@ -1,0 +1,28 @@
+{{ $winner := .winner }}
+{{ $loser := .loser }}
+{{ range .bracket }}
+	{{ range $index,$element := . }}
+		{{ with $element }}
+		<tr{{ if (eq .name "BYE")}} class="bye"{{end}}>
+			{{ if (eq $index 0) }}
+				<td class="pairing" rowspan="2">&nbsp;</td>
+			{{ end }}
+			<td>{{ .name }}</td>
+			{{ range $i := (seq 0 4)}}
+			<td>
+				{{ with $element.scores }}
+					{{ index . $i }}
+				{{ end }}
+			</td>
+			{{ end }}
+			<td></td>
+			<td>
+			{{ if (eq .win "third")}}🥉
+			{{ else if (eq .win "second")}}🥈
+			{{ else if (eq .win "first")}}🥇
+			{{ else if .advance }}{{ $winner }}
+			{{ else }}{{ $loser }}{{ end }}</td>
+		</tr>
+		{{ end }}
+	{{ end }}
+{{ end }}

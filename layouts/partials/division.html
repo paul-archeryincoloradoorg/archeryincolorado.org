@@ -1,0 +1,37 @@
+<table class="{{ .division.style }} {{ .division.age }} {{ .division.gender }}">
+	<thead>
+		<tr>
+			<th colspan="10">{{ .division.style }} - {{ .division.age }} - {{ .division.gender }}</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>Competitor</th>
+			<th colspan="6">Scores</th>
+			<th>Result</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="sep">
+			<th colspan="10">Quarterfinal</th>
+		</tr>
+		{{ partial "matchplay-result.html" (dict "bracket" .brackets.quarter "winner" "👑" "looser" "") }}
+	</tbody>
+	<tbody>
+		<tr class="sep">
+			<th colspan="10">Semifinal</th>
+		</tr>
+		{{ partial "matchplay-result.html" (dict "bracket" .brackets.semi "winner" "👑" "looser" "") }}
+	</tbody>
+  {{ if .brackets.bronze }}<tbody>
+    <tr class="sep">
+      <th colspan="10">Bronze</th>
+    </tr>
+    {{ partial "matchplay-result.html" (dict "bracket" .brackets.bronze "winner" "👑" "looser" "") }}
+  </tbody>{{end}}
+  <tbody>
+    <tr class="sep">
+      <th colspan="10">Gold</th>
+    </tr>
+    {{ partial "matchplay-result.html" (dict "bracket" .brackets.gold "winner" "👑" "looser" "") }}
+  </tbody>
+</table>

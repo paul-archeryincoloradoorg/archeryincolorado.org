@@ -1,0 +1,149 @@
+{
+	"metadata": {
+		"name": "2019 USA Archery Colorado State Championship",
+		"date": "2019-08-04"
+	},
+	"matchplay": [
+		{
+			"division": {
+				"style": "Compound",
+				"age": "Yeoman",
+				"gender": "Male"	
+			},
+			"brackets": {
+				"quarter": [
+					[
+						{ "name": "Colton Williams", "advance": true },
+						{ "name": "BYE" }
+					],
+					[
+						{ "name": "BYE" },
+						{ "name": "BYE" }
+					],
+					[
+						{ "name": "Charlie Shumway", "advance": true },
+						{ "name": "BYE" }
+					],
+					[
+						{ "name": "BYE" },
+						{ "name": "Ethan Williams", "advance": true }
+					]
+				],
+				"semi": [
+          [
+            { "name": "Colton Williams", "advance": true },
+            { "name": "BYE" }
+          ],
+					[
+						{ "name": "Charlie Shumway", "scores": [30,27,22,28,27]},
+						{ "name": "Ethan Williams", "scores": [29,30,30,29,30], "advance": true}
+					]
+				],
+				"bronze": [
+					[
+						{ "name": "Charlie Shumway", "scores": [], "win": "third" },
+						{ "name": "BYE" }
+					]
+				],
+				"gold": [
+					[
+						{ "name": "Colton Williams", "scores": [29,30,30,30,30], "win": "first" },
+						{ "name": "Ethan Williams", "scores": [29,29,28,29,30], "win": "second" }
+					]
+				]
+			}
+		},
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Bowman",
+        "gender": "Female"
+      },
+      "brackets": {
+        "quarter": [
+          [
+            { "name": "Ali Bliss", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Zoe Robinson", "advance": true},
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "Makayla McFarren", "advance": true}
+          ]
+        ],
+        "semi": [
+          [
+            { "name": "Ali Bliss", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Zoe Robinson", "scores": [10,7,23,0]},
+            { "name": "Makayla McFarren", "scores": [14,18,19,22], "advance": true}
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Zoe Robinson", "win": "third"},
+            { "name": "BYE" }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Ali Bliss", "scores": [24,23,27], "win": "first" },
+            { "name": "Makayla McFarren", "scores": [23,21,22], "win":"second"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Bowman",
+        "gender": "Male"
+      },
+      "brackets": {
+        "quarter": [
+          [
+            { "name": "Tyler Williams", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "Tristan Williams", "advance": true }
+          ]
+        ],
+        "semi": [
+          [
+            { "name": "Tyler Williams", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "BYE" },
+            { "name": "Tristan Williams", "advance": true }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Tyler Williams", "scores": [27,30,26,28,27], "win": "second" },
+            { "name": "Tristan Williams", "scores": [29,27,30,29,28], "win": "first" }
+          ]
+        ]
+      }
+    }
+  ]
+}
