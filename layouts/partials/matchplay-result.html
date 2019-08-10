@@ -9,14 +9,14 @@
 			{{ end }}
 			<td>{{ .name }}</td>
 			{{ range $i := (seq 0 4)}}
-			<td>
+			<td class="score">
 				{{ with $element.scores }}
 					{{ index . $i }}
 				{{ end }}
 			</td>
 			{{ end }}
-			<td></td>
-			<td>
+			<td class="total"></td>
+			<td class="result">
 			{{ if (eq .win "third")}}<div class="tooltip">🥉<span class="tooltiptext">Third Place</span></div>
 			{{ else if (eq .win "second")}}<div class="tooltip">🥈<span class="tooltiptext">Second Place</span></div>
 			{{ else if (eq .win "first")}}<div class="tooltip">🥇<span class="tooltiptext">First Place</span></div>

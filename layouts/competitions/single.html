@@ -42,17 +42,93 @@
       </div>
     </section>
 
-  {{ with .Site.Data.coloradostatechampionship }}
-    {{ range .matchplay }}
       <section class="section">
         <div class="container">
           <div class="columns">
             <div class="column is-centered">
-            {{ partial "division.html" . }}
+              <b>Show Only:</b>
+              <div selector>
+                <span>
+                  Style: 
+                    <select id="style">
+                      <option value="" default>All</option>
+                      <option value="Barebow">Barebow</option>
+                      <option value="Compound">Compound</option>
+                      <option value="Recurve">Recurve</option>
+                    </select>
+                </span>
+                <span>
+                  Age:
+                  <select id="age">
+                    <option value="" default>All</option>
+                    <option value="Yeoman">Yeoman</option>
+                    <option value="Bowman">Bowman</option>
+                    <option value="Cub">Cub</option>
+                    <option value="Cadet">Cadet</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Master">Master</option>
+                  </select>
+                </span>
+                <span>
+                  Gender:
+                  <select id="gender">
+                    <option value="" default>All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </span>
+
+                <script>
+                  var filterset = {
+                    "age": "",
+                    "gender": "",
+                    "style": ""
+                  };
+
+                  var containsall = function(container, required) {
+                    var retval = true;
+                    required.forEach((item) => {
+                      if( item && !container.contains(item)) {
+                        retval = false;
+                      }
+                    });
+
+                    return retval;
+                  }
+
+                  var filter = function(e) {
+                    filterset[e.target.id] = e.target.value;
+
+                    var divisions = document.getElementsByClassName("divisionresult");
+
+                    for(i=0; i<divisions.length; i++) {
+                      var filters = Object.values(filterset)
+                      if( containsall(divisions[i].classList, filters)) {
+                        divisions[i].setAttribute("style","");  
+                      } else {
+                        divisions[i].setAttribute("style","display:none");
+                      }
+                    }
+                  }
+
+                  window.addEventListener('DOMContentLoaded', (event) => {
+                    var selectors = document.getElementsByTagName("select");
+                    for( var i = 0; i < selectors.length; i++) {
+                      selectors[i].addEventListener('input', filter)
+                    }
+                  });
+                </script>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+
+  {{ with .Site.Data.coloradostatechampionship }}
+    {{ range .matchplay }}
+            {{ partial "division.html" . }}
     {{ end }}
   {{ end }}
     

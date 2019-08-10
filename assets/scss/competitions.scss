@@ -31,3 +31,44 @@ tr {
     background: darken($firstset, 10%);
   }
 }
+
+td {
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+td.score, td.total, td.result {
+  text-align:center;
+}
+
+td.score, td.total {
+  width:3em;
+}
+
+td.result {
+  width: 5em;
+  overflow: visible;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 15%/50%;
+   
+    position: absolute;
+    z-index: 100;
+  }
+
+  /* Show the tooltip text when you mouse over the tooltip container */
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}

@@ -218,6 +218,316 @@
           ]
         ]
       }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Senior",
+        "gender": "Male"
+      },
+      "brackets": {
+        "quarter": [
+          [
+            { "name": "Tom Adjutant", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "John Parkinson", "scores": [22,23,26,19,19], "advance": true},
+            { "name": "Leonardo Carrasco", "scores": [16,23,23,20,20] }
+          ],
+          [
+            { "name": "John Vitera", "scores": [20,19,9,12,17] },
+            { "name": "Robert McGovern", "scores": [20,17,19,23,17], "advance": true}
+          ],
+          [
+            { "name": "Luther Augenstein III", "scores": [10,13,9] },
+            { "name": "Ben Rogers", "scores": [21,26,25], "advance": true}
+          ]
+        ],
+        "semi": [
+          [
+            { "name": "Tom Adjutant", "scores": [22,26,22,28], "advance": true },
+            { "name": "John Parkinson", "scores": [17,21,23,20] }
+          ],
+          [
+            { "name": "Robert McGovern", "scores": [12,16,16] },
+            { "name": "Ben Rogers", "scores": [21,27,24], "advance": true}
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Tom Adjutant", "scores": [16,20,24,27,19], "win": "second" },
+            { "name": "Ben Rogers", "scores": [25,26,23,26,23], "win": "first"}
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "John Parkinson", "scores": [20,23,11,23], "win": "third" },
+            { "name": "Robert McGovern", "scores": [18,7,16,18] }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Master",
+        "gender": "Male"
+      },
+      "brackets": {
+        "gold": [
+          [
+            { "name": "Daniel Weiss", "scores": [17,12,24,15], "win": "first" },
+            { "name": "Daniel Daugherty", "scores": [16,12,18,9], "win": "second" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Cub",
+        "gender": "Male"
+      },
+      "brackets": {
+        "gold": [
+          [
+            { "name": "Ryan Seymour", "scores": [20,20,22,24], "win": "first" },
+            { "name": "Ryan Yee", "scores": [16,25,19,17], "win": "second" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Barebow",
+        "age": "Senior",
+        "gender": "Female"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Kay Earls", "advance": true},
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Evangeline Christel", "advance": true},
+            { "name": "Mary Holzer (forefeit)" }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Kay Earls", "scores": [22,29,20], "win": "first" },
+            { "name": "Evangeline Christel", "scores": [10,3,6], "win": "second" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Master",
+        "gender": "Male"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Scott Wilson", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "Joel Caballero", "scores": [29,25,23,24,21] },
+            { "name": "Brian Van De Krol", "scores": [27,27,9,8,7], "advance": true }
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Joel Caballero", "scores": [], "win": "third" },
+            { "name": "BYE" }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Scott Wilson", "scores": [30,26,29,29,29], "win": "first" },
+            { "name": "Brian Van De Krol", "scores": [27,25,26,23,28], "win": "second" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Senior",
+        "gender": "Male"
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Evan Flores", "advance": true },
+            { "name": "BYE" }
+          ],
+          [
+            { "name": "David Sanchez", "scores": [27,29,25,25,23], "advance": true },
+            { "name": "Scot Hilden", "scores": [24,23,24,28,26] }
+          ]
+        ],
+        "bronze": [
+          [
+            { "name": "Scot Hilden", "win": "third" },
+            { "name": "BYE" }
+          ]
+        ],
+        "gold": [
+          [
+            { "name": "Evan Flores", "scores": [28,30,27,28,30], "win": "first" },
+            { "name": "David Sanchez", "scores": [23,22,22,25,25], "win": "second" }
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Cadet",
+        "gender": "Female"
+      },
+      "brackets": {
+        "semi": [
+          [
+            {"name": "Amber Baum", "advance": true},
+            {"name": "BYE" }
+          ],
+          [
+            {"name": "Alexa Larson", "scores": [28,29,25,27,26], "advance": true},
+            {"name": "Sarah Barnes", "scores": [23,24,25,22,24] }
+          ]
+        ],
+        "bronze": [
+          [
+            {"name": "Sarah Barnes", "scores": [], "win": "third" },
+            {"name": "BYE" }
+          ]
+        ],
+        "gold": [
+          [
+            {"name": "Amber Baum", "scores": [27,29,26,25,29], "win": "first"},
+            {"name": "Alexa Larson", "scores": [27,23,26,13,26], "win": "second"}
+          ]
+        ]
+      }
+    },
+    {
+      "division": {
+        "style": "Compound",
+        "age": "Cadet",
+        "gender": "Female"        
+      },
+      "brackets": {
+        "gold": [[
+          { "name": "Wendi White", "scores": [21,25,24,25,27], "win": "first"},
+          { "name": "Shanee Arnold", "scores": [13,10,9,11,12], "win": "second"}
+        ]]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Cadet",
+        "gender": "Female"        
+      },
+      "brackets": {
+        "semi": [
+          [
+            { "name": "Erin Flores", "scores": [22,24,24], "advance": true},
+            { "name": "Elizabeth Bastunskiy", "scores": [19,19,18] }
+          ],
+          [
+            { "name": "Payton States", "scores": [16,16,21,18] },
+            { "name": "Olivia Martin", "scores": [23,21,16,21], "advance": true}
+          ]
+        ],
+        "gold": [[
+          { "name": "Erin Flores", "scores": [16,23,20,23,20], "win": "first"},
+          { "name": "Olivia Martin", "scores": [23,15,18,24,19], "win": "second" }
+        ]],
+        "bronze": [[
+          { "name": "Payton States", "scores": [21,16,9] },
+          { "name": "Elizabeth Bastunskiy", "scores": [27,19,14], "win": "third" }
+        ]]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Cadet",
+        "gender": "Male"        
+      },
+      "brackets": {
+        "semi": [
+          [
+            {"name": "Maximilian Rearic", "advance": true},
+            {"name": "BYE"}
+          ],
+          [
+            {"name": "Brett Deas", "scores": [22,18,13] },
+            {"name": "Joshua Cullwell", "scores": [24,22,21], "advance": true}
+          ]
+        ],
+        "gold": [[
+          {"name": "Maximilian Rearic", "scores": [25,25,23], "win": "first"},
+          {"name": "Joshua Cullwell", "scores": [7,5,5], "win": "second"}
+        ]],
+        "bronze": [[
+          {"name": "Brett Deas", "scores": [], "win": "third" },
+          {"name": "BYE"}
+        ]]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Senior",
+        "gender": "Female"        
+      },
+      "brackets": {
+        "semi": [
+          [
+            {"name": "Mackenzie Kieborz", "advance": true},
+            {"name": "BYE"}
+          ],
+          [
+            {"name": "Elizabeth Certain", "scores": [20,15,21], "win":"third"},
+            {"name": "Melissa McAvoy", "scores": [23,20,25], "advance": true}
+          ]
+        ],
+        "gold": [[
+          {"name": "Mackenzie Kieborz", "scores": [22,24,26], "win": "first"},
+          {"name": "Melissa McAvoy", "scores": [17,22,17], "win": "second"}
+        ]]
+      }
+    },
+    {
+      "division": {
+        "style": "Recurve",
+        "age": "Senior",
+        "gender": "Male"        
+      },
+      "brackets": {
+        "semi": [
+          [
+            {"name": "Ted Holland", "advance": true},
+            {"name": "BYE"}
+          ],
+          [
+            {"name": "Tyler Herz (guest)", "scores": [20,18,21,20], "win": "third"},
+            {"name": "Kevin Mather", "scores": [21,26,21,24], "advance": true}
+          ]
+        ],
+        "gold": [[
+          {"name": "Ted Holland", "scores": [26,25,27], "win": "first"},
+          {"name": "Kevin Mather", "scores": [22,24,26], "win": "second"}
+        ]]
+      }
     }
   ]
 }

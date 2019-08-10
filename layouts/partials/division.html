@@ -1,4 +1,9 @@
-<table class="{{ .division.style }} {{ .division.age }} {{ .division.gender }}">
+      <section class="section divisionresult {{ .division.style }} {{ .division.age }} {{ .division.gender }}">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-centered">
+
+<table>
 	<thead>
 		<tr>
 			<th colspan="10">{{ .division.style }} - {{ .division.age }} - {{ .division.gender }}</th>
@@ -35,3 +40,8 @@
     {{ partial "matchplay-result.html" (dict "bracket" .brackets.gold "winner" "👑" "looser" "") }}
   </tbody>
 </table>
+
+</div>
+</div>
+</div>
+</section>
