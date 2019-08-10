@@ -32,6 +32,8 @@ params:
     url: /
   - title: Mission
     url: /mission
+  - title: Competitions
+    url: /competitions
   - title: Board of Directors
     url: /board
   - title: News
