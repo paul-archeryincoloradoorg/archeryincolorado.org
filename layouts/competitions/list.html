@@ -53,7 +53,7 @@
           	</div>
             <div class="byline">by {{ .Params.author }}</div>
           </div>
-          <div class="tile is-child is-10" onclick="window.location='2019-colorado-state-championship'" style="cursor: pointer;">
+          <div class="tile is-child is-10" onclick="window.location='{{.File.BaseFileName}}'" style="cursor: pointer;">
             <h2>{{ .Params.Title }}</h2>
             {{ .Summary }}
           </div>

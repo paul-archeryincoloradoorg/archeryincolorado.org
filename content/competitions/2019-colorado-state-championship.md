@@ -3,6 +3,7 @@ title: 2019 USA Archery Colorado State Championship
 subtitle: August 4th 2019 @ Titan Sports Complex Littleton Colorado
 lastmod: 2019-08-04
 author: Archery in Colorado
+layout: usa-outdoor
 ---
 Congratulations to all participants who came out to make the event a success!
 <!--more-->

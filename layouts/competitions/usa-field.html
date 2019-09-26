@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ partial "css.html" . }}
+    {{- $competitionScss := "scss/competitions.scss" }}
+    {{- $competitionCss  := resources.Get $competitionScss | toCSS | minify | fingerprint }}
+<link rel="stylesheet" type="text/css" href="{{ $competitionCss.RelPermalink }}" integrity="{{ $competitionCss.Data.Integrity }}">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NWPJW9V');</script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWPJW9V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-centered">
+            <h1 class="title section-title">{{ .Title }}</h1>
+            <h5 class="subtitle is-muted">{{ .Params.Subtitle }}</h5>
+            <div class="divider"></div>
+          </div>
+        </div>
+        {{ .Content }}
+      </div>
+    </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-centered">
+              <b>Show Only:</b>
+              <div selector>
+                <span>
+                  Style: 
+                    <select id="style">
+                      <option value="" default>All</option>
+                      <option value="Longbow">Longbow</option>
+                      <option value="Barebow">Barebow</option>
+                      <option value="Compound">Compound</option>
+                      <option value="Recurve">Recurve</option>
+                    </select>
+                </span>
+                <span>
+                  Age:
+                  <select id="age">
+                    <option value="" default>All</option>
+                    <option value="Yeoman">Yeoman</option>
+                    <option value="Bowman">Bowman</option>
+                    <option value="Cub">Cub</option>
+                    <option value="Cadet">Cadet</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Master">Master</option>
+                  </select>
+                </span>
+                <span>
+                  Gender:
+                  <select id="gender">
+                    <option value="" default>All</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </span>
+
+                <script>
+                  var filterset = {
+                    "age": "",
+                    "gender": "",
+                    "style": ""
+                  };
+
+                  var containsall = function(container, required) {
+                    var retval = true;
+                    required.forEach((item) => {
+                      if( item && !container.contains(item)) {
+                        retval = false;
+                      }
+                    });
+
+                    return retval;
+                  }
+
+                  var filter = function(e) {
+                    filterset[e.target.id] = e.target.value;
+
+                    var divisions = document.getElementsByClassName("divisionresult");
+
+                    for(i=0; i<divisions.length; i++) {
+                      var filters = Object.values(filterset)
+                      if( containsall(divisions[i].classList, filters)) {
+                        divisions[i].setAttribute("style","");  
+                      } else {
+                        divisions[i].setAttribute("style","display:none");
+                      }
+                    }
+                  }
+
+                  window.addEventListener('DOMContentLoaded', (event) => {
+                    var selectors = document.getElementsByTagName("select");
+                    for( var i = 0; i < selectors.length; i++) {
+                      selectors[i].addEventListener('input', filter)
+                    }
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    {{ $results := getJSON .Params.datafile }}
+    {{ range $results }}
+      {{ partial "field-results.html" . }}
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+    {{ partial "javascript.html" . }}
+  </body>
+</html>

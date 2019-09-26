@@ -1,0 +1,46 @@
+<section class="section divisionresult {{ .division }} {{ .age }} {{ .gender }}">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered">
+
+        <table>
+          <thead>
+            <tr>
+              <th colspan="8">{{ .division }} - {{ .age }} - {{ .gender }}</th>
+            </tr>
+            <tr>
+              <th rowspan="2"></th>
+              <th rowspan="2">Competitor</th>
+              <th colspan="6">Scores</th>
+            </tr>
+              <th class="score">Marked</th>
+              <th class="score">6's</th>
+              <th class="score">Unmarked</th>
+              <th class="score">6's</th>
+              <th class="total">Total</th>
+              <th class="total">6's</th>
+            <tr>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range $index,$element := .result }}
+            {{ with $element }}
+            <tr>
+              <td>{{ add $index 1}}</td>
+              <td>{{ .name }}</td>
+              <td class="score">{{ .marked }}</td>
+              <td class="score">{{ .marked6 }}</td>
+              <td class="score">{{ .unmarked }}</td>
+              <td class="score">{{ .unmarked6 }}</td>
+              <td class="total">{{ .total }}</td>
+              <td class="total">{{ .total6 }}</td>
+            </tr>
+            {{ end }}
+            {{ end }}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</section>
