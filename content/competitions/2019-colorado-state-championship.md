@@ -11,3 +11,5 @@ This event was the first hosted by Archery in Colorado!  We learned a ton, and a
 [Qualification Results](10068_results_2019_USA_Archery_Colorado_State_Outdoor_Championship.pdf)
 
 Below are the matchplay results. If you don't see a divison you expect, it's because there was only one competition in that division and they were awarded a gold medal by default.  You can check the qualification results above to find qualification scores.
+
+Special thanks to our volunteers and Chris Dorow from Aslan Archery Academy for their support.
